@@ -1,0 +1,13 @@
+def quicksort(arr):
+    if len(arr) <= 1:
+        return arr  # База: массив из 0 или 1 элемента уже отсортирован
+    else:
+        pivot = arr[len(arr) // 2]  # выбираем опорный элемент (можно случайный)
+        left = [x for x in arr if x < pivot]   # все, что меньше pivot
+        middle = [x for x in arr if x == pivot]  # все равные pivot
+        right = [x for x in arr if x > pivot]  # все, что больше
+        return quicksort(left) + middle + quicksort(right)
+
+# Пример
+data = [3, 6, 8, 10, 1, 2, 1]
+print("Отсортированный массив:", quicksort(data))
