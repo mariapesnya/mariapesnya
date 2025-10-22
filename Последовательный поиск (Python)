@@ -1,0 +1,14 @@
+for index, element in enumerate(arr):
+        if element == target:
+            return index  # Найден индекс искомого элемента
+    return -1  # Если элемент не найден
+
+# Пример использования
+data = [5, 3, 8, 4, 2]
+target_value = 8
+result = linear_search(data, target_value)
+
+if result != -1:
+    print(f"Элемент найден на позиции: {result}")
+else:
+    print("Элемент не найден")
